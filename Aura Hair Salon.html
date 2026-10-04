@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Aura Hair Salon | Haircut &amp; Beard</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;700&family=Outfit:wght@400;500&display=swap">
+<style>
+:root{--bg:#FFF8F8;--ink:#2E1A2E;--muted:#6E5A6E;--plum:#4A2545;--rose:#F3CFD6;--sage:#CFE3D6;--card:#fff;--line:#EAD6DB;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#1D1020;--ink:#F7E9EE;--muted:#C4AEBB;--plum:#E9B8CC;--rose:#3A1E3A;--sage:#24362C;--card:#2A1830;--line:#47304A}}
+:root[data-theme="dark"]{--bg:#1D1020;--ink:#F7E9EE;--muted:#C4AEBB;--plum:#E9B8CC;--rose:#3A1E3A;--sage:#24362C;--card:#2A1830;--line:#47304A}
+*{box-sizing:border-box}html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.6 Outfit,system-ui,sans-serif}
+h1,h2,h3{font-family:"Cormorant Garamond",Georgia,serif;line-height:1.1;margin:0}
+.wrap{max-width:960px;margin:0 auto;padding:0 20px}
+nav{display:flex;justify-content:space-between;align-items:center;padding:18px 0}
+.logo{font:700 26px "Cormorant Garamond",Georgia,serif;color:var(--plum);text-decoration:none}
+nav a.call{color:var(--ink);text-decoration:none;border:1px solid var(--line);padding:8px 16px;border-radius:999px}
+.hero{background:var(--rose);border-radius:0 0 40px 40px;padding:36px 0 56px}
+.hero h1{font-size:clamp(42px,9vw,84px);color:var(--plum);max-width:12ch}
+.hero p{max-width:34ch;color:var(--muted);margin:18px 0 26px;font-size:19px}
+.btn{display:inline-block;background:var(--plum);color:var(--bg);padding:14px 26px;border-radius:999px;text-decoration:none;font-weight:500;border:0;font-size:16px;cursor:pointer;font-family:inherit}
+.btn:focus-visible,a:focus-visible,select:focus-visible,input:focus-visible{outline:3px solid var(--plum);outline-offset:3px}
+section{padding:56px 0}
+h2{font-size:clamp(32px,6vw,46px);color:var(--plum);margin-bottom:8px}
+.sub{color:var(--muted);margin:0 0 28px}
+.menu{display:grid;gap:14px}
+.row{display:flex;justify-content:space-between;gap:16px;align-items:baseline;padding:16px 0;border-bottom:1px solid var(--line)}
+.row h3{font-size:25px}.row span{color:var(--muted);font-size:15px;display:block}
+.row b{font-weight:500;white-space:nowrap}
+.hours{background:var(--sage);border-radius:28px;padding:28px}
+.hours h2{margin-bottom:14px}
+.hours p{margin:6px 0}
+.book{display:grid;gap:14px;max-width:460px}
+.book label{display:grid;gap:6px;font-weight:500}
+.book select,.book input{padding:13px;border-radius:12px;border:1px solid var(--line);background:var(--card);color:var(--ink);font:inherit}
+footer{padding:30px 0 40px;color:var(--muted);text-align:center;font-size:15px}
+</style>
+</head>
+<body>
+<header class="hero">
+<div class="wrap">
+<nav><a class="logo" href="#">Aura Hair Salon</a><a class="call" href="tel:+919982342685">Call us</a></nav>
+<h1>Sharp cuts. Clean beards.</h1>
+<p>Haircuts and beard styling at fair prices. Walk in or book a slot.</p>
+<a class="btn" href="#book">Book appointment</a>
+</div>
+</header>
+
+<main class="wrap">
+<section id="services">
+<h2>Services and prices</h2>
+<p class="sub">Simple, fixed prices.</p>
+<div class="menu">
+<div class="row"><div><h3>Hair cut</h3><span>Wash and clean cut</span></div><b>₹50</b></div>
+<div class="row"><div><h3>Customize hair cut</h3><span>Style as you like</span></div><b>₹70</b></div>
+<div class="row"><div><h3>Beard</h3><span>Trim and shape</span></div><b>₹30</b></div>
+<div class="row"><div><h3>Hair cut &amp; Beard</h3><span>Cut and beard together</span></div><b>₹80</b></div>
+<div class="row"><div><h3>Premium haircut and Beard</h3><span>Detailed styling and finish</span></div><b>₹100</b></div>
+</div>
+</section>
+
+<section>
+<div class="hours">
+<h2>Visit us</h2>
+<p>Main Market, Morpa</p>
+<p>Open 8:00 am to 8:00 pm. Closed on Tuesday and Saturday</p>
+<p>Phone: 99823 42685</p>
+</div>
+</section>
+
+<section id="book">
+<h2>Book your slot</h2>
+<p class="sub">Pick a service and we will confirm on WhatsApp.</p>
+<div class="book">
+<label>Your name<input id="name" autocomplete="name"></label>
+<label>Service<select id="svc"><option>Hair cut</option><option>Customize hair cut</option><option>Beard</option><option>Hair cut & Beard</option><option>Premium haircut and Beard</option></select></label>
+<label>Preferred date<input id="date" type="date"></label>
+<button class="btn" id="go" type="button">Send on WhatsApp</button>
+</div>
+</section>
+</main>
+
+<footer>© Aura Hair Salon. All rights reserved.</footer>
+
+<script>
+document.getElementById('go').addEventListener('click',function(){
+var n=document.getElementById('name').value.trim()||'a customer';
+var s=document.getElementById('svc').value;
+var d=document.getElementById('date').value||'any day';
+var t='Hi Aura Hair Salon, this is '+n+'. I want to book '+s+' on '+d+'.';
+window.open('https://wa.me/919982342685?text='+encodeURIComponent(t),'_blank');
+});
+</script>
+</body>
+</html>
